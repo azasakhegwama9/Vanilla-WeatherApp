@@ -1,3 +1,43 @@
 .container {
-    color: red;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    color: #e8eaed;
+    background: #999999;
+}
+.side{
+    display:block;
+    margin: 0 auto;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 3px 3px 3px 3px black;
+}
+p{
+    color:#e8eaed;
+    font-size: 12px;
+}
+ul {
+    list-style: none;
+}
+.col-sm-2 {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: aliceblue;
+    vertical-align: super;
+    font-size: smaller;
+}
+a:hover {
+    cursor: pointer;
+    transition: 200ms all ease-in-out;
+    text-decoration: underline;
+}
+.shift{
+    position: relative;
+    right: -20px;
+}
+.move{
+    position: relative;
+    right: -10px;
 }
