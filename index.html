@@ -14,10 +14,11 @@
 </head>
 <body>
     <div class="container">
+        <div class="main">
 
     <div class="row">
     <div class="col-md-6">
-    <ul>
+    <ul class="description">
         <li>Humidity: 50%</li>
         <li>Wind: 5km/h</li>
         <li>Pressure: 1012</li>   
@@ -27,12 +28,12 @@
     <div class="col-md-6">
         <span class="side">
     <ul>
-       <h3>Port Elizabeth</h3>
+       <h3 class="city">Port Elizabeth</h3>
         <li>Tuesday, 15:00</li>
         <li>Clear Sky</li>
         <br />
-        <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Clear Sky"/> 
-        17 <a href="" target="">°C | °F </a>
+        <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Clear Sky" class="icon1"/> 
+        <small class="temp"> 17 </small><a href="#" class="link">°C |</a> <a href="#" class="link1">°F </a>
     </ul>
     </span>
     </div>
@@ -67,12 +68,19 @@
         <li class="move">26° / 20° </li>
     </div>
 
+    <div class="col-sm-2">
+        <li class="shift">Mon</li>
+         <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Partly Sunny" />
+        <li class="move">20° / 11° </li>
+    </div>
+
 
     </div>
+    </div>
     <br />
-    <p>
-        <a href="https://github.com/azasakhegwama9/Vanilla-WeatherApp" target="_blank"> Open-source code </a>   
-        by Aza Gwama
+    <p class="textDescription">
+        <a href="https://github.com/azasakhegwama9/Vanilla-WeatherApp" target="_blank" class="codeDetails"> Open-source code </a>   
+        <span class="codeText"> by Aza Gwama </span> 
     </p>
 
     </div>

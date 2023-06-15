@@ -1,37 +1,53 @@
-.container {
+.main {
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
     color: #e8eaed;
     background: #999999;
-}
-.side{
-    display:block;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 30px auto;
+    margin-bottom: 2px;
+    padding: 20px;
+    padding-bottom: 2px;
     border: 2px solid gray;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 3px 3px 3px 3px black;
-}
-p{
-    color:#e8eaed;
-    font-size: 12px;
+    border-radius: 5px;
 }
 ul {
     list-style: none;
 }
+.side{
+    display: block;
+    padding-bottom: 0;
+    padding-top: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 240px;
+    box-shadow: 3px 3px 3px black;
+}
 .col-sm-2 {
     list-style: none;
+    padding: 20px;
 }
-a {
-    text-decoration: none;
-    color: aliceblue;
+.main .city {
+    font-size: 30px;
+    font-weight: 800;
+}
+.main .link {
     vertical-align: super;
-    font-size: smaller;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+    color: #e8eaed;
+    padding-left: 0;
+    margin: 0;
 }
-a:hover {
-    cursor: pointer;
-    transition: 200ms all ease-in-out;
-    text-decoration: underline;
+.main .link1 {
+    vertical-align: super;
+    font-size: 18px;
+    position: relative;
+    top: -20px;
+    padding-left: 0;
+    margin: 0;
 }
 .shift{
     position: relative;
@@ -40,4 +56,32 @@ a:hover {
 .move{
     position: relative;
     right: -10px;
+}
+.main .description {
+    display:block;
+    padding: 50px;
+    padding-top: 140px;
+    margin: 20px auto;
+}
+.main .temp {
+    padding: 1px;
+    font-size: 60px;
+    color: #fbfcf8;
+}
+.main .icon1 {
+    position: relative;
+    top:-15px;
+}
+.codeDetails {
+    text-align: center;
+}
+.codeText {
+    text-align: center;
+    color: black;
+}
+.textDescription {
+    display: block;
+    padding-left: 260px;
+    padding-top: 1px;
+    font-family: monospace;  
 }
