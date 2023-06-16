@@ -3,7 +3,7 @@
     font-weight: 600;
     color: #e8eaed;
     background: #999999;
-    max-width: 600px;
+    max-width: 700px;
     margin: 30px auto;
     margin-bottom: 2px;
     padding: 20px;
@@ -14,14 +14,19 @@
 ul {
     list-style: none;
 }
+li {
+    text-transform: capitalize;
+}
 .side{
     display: block;
     padding-bottom: 0;
     padding-top: 20px;
     border: 2px solid gray;
     border-radius: 10px;
-    width: 240px;
+    max-width: 250px;
     box-shadow: 3px 3px 3px black;
+    position: relative;
+    right: -70px;
 }
 .col-sm-2 {
     list-style: none;
@@ -37,6 +42,7 @@ ul {
     text-decoration: none;
     position: relative;
     top: -20px;
+    left: -30px;
     color: #e8eaed;
     padding-left: 0;
     margin: 0;
@@ -46,6 +52,7 @@ ul {
     font-size: 18px;
     position: relative;
     top: -20px;
+    left: -30px;
     padding-left: 0;
     margin: 0;
 }
@@ -60,17 +67,22 @@ ul {
 .main .description {
     display:block;
     padding: 50px;
+    font-size: 19px;
     padding-top: 140px;
     margin: 20px auto;
 }
 .main .temp {
     padding: 1px;
-    font-size: 60px;
+    font-size: 48px;
     color: #fbfcf8;
+    position: relative;
+    left: -30px;
 }
 .main .icon1 {
     position: relative;
-    top:-15px;
+    top:-12px;
+    left: -20px;
+    width: 60px;
 }
 .codeDetails {
     text-align: center;
