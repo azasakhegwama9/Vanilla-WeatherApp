@@ -27,10 +27,16 @@ li {
     box-shadow: 3px 3px 3px black;
     position: relative;
     right: -70px;
+    top: -75px;
 }
 .col-sm-2 {
     list-style: none;
-    padding: 20px;
+    padding: 10px;
+}
+.col-sm-3{
+    position:relative;
+    left: -75px;
+    bottom: 3px;
 }
 .main .city {
     font-size: 30px;
@@ -68,8 +74,10 @@ li {
     display:block;
     padding: 50px;
     font-size: 19px;
-    padding-top: 140px;
+    padding-top: -200px;
     margin: 20px auto;
+    position: relative;
+    right: -200px;
 }
 .main .temp {
     padding: 1px;
@@ -96,4 +104,14 @@ li {
     padding-left: 260px;
     padding-top: 1px;
     font-family: monospace;  
+}
+.card {
+    width: 500px;
+    fill: none;
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 16px;
+    position:relative;
+    bottom: -1px;
 }

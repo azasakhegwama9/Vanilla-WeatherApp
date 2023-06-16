@@ -47,7 +47,21 @@ function displayTemp (response){
     icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+function search (city) {
 let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
-let city = "Port Elizabeth";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemp);   
+}
+
+
+function searchCity (event){
+  event.preventDefault();
+  let city = document.querySelector("#input-city");
+  search(city.value);
+  console.log(city.value);
+}
+
+search("Port Elizabeth");
+
+let buttonClick = document.querySelector("#input-form");
+buttonClick.addEventListener("submit", searchCity);
