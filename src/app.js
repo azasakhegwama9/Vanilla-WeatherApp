@@ -1,4 +1,4 @@
-function formatDate(timestamp) {
+function formatDate(time) {
     let date = new Date();
     let hours = date.getHours();
     if (hours < 10 ) {
@@ -22,6 +22,9 @@ function formatDate(timestamp) {
 }
 
 function displayTemp (response){
+    
+    celsiusTemp = Math.round(response.data.main.temp);
+
     let city = document.querySelector("#city");
     city.innerHTML = response.data.name;
 
@@ -47,6 +50,26 @@ function displayTemp (response){
     icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+
+
+function linkF(event) {
+  event.preventDefault();
+  let fah = document.querySelector("#temp");
+  fah.innerHTML = Math.round(celsiusTemp * (9 / 5) + 32);
+}
+let buttonLink = document.querySelector("#fahrenheit");
+buttonLink.addEventListener("click", linkF);
+
+
+function linkC(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temp"); 
+  temperature.innerHTML = celsiusTemp;
+}
+let buttonLink1 = document.querySelector("#celsius");
+buttonLink1.addEventListener("click", linkC);
+
+
 function search (city) {
 let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -58,10 +81,11 @@ function searchCity (event){
   event.preventDefault();
   let city = document.querySelector("#input-city");
   search(city.value);
-  console.log(city.value);
 }
 
-search("Port Elizabeth");
+let celsiusTemp = null;
 
 let buttonClick = document.querySelector("#input-form");
 buttonClick.addEventListener("submit", searchCity);
+
+search("Port Elizabeth");

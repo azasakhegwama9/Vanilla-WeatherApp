@@ -42,25 +42,35 @@ li {
     font-size: 30px;
     font-weight: 800;
 }
-.main .link {
-    vertical-align: super;
-    font-size: 18px;
-    text-decoration: none;
-    position: relative;
-    top: -20px;
-    left: -30px;
-    color: #e8eaed;
-    padding-left: 0;
-    margin: 0;
-}
 .main .link1 {
     vertical-align: super;
     font-size: 18px;
     position: relative;
     top: -20px;
     left: -30px;
+    color: #e8eaed;
+    text-decoration: none;
     padding-left: 0;
     margin: 0;
+}
+.link1:hover {
+    color:blue;
+    text-decoration:underline;
+}
+.main .link2 {
+    vertical-align: super;
+    font-size: 18px;
+    color: #e8eaed;
+    text-decoration: none;
+    position: relative;
+    top: -20px;
+    left: -30px;
+    padding-left: 0;
+    margin: 0;
+}
+.link2:hover {
+    color:blue;
+    text-decoration:underline;
 }
 .shift{
     position: relative;
