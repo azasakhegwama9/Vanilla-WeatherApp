@@ -23,33 +23,36 @@ function formatDate(time) {
 
 function displayTemp (response){
     
-    celsiusTemp = Math.round(response.data.main.temp);
+    celsiusTemp = Math.round(response.data.temperature.current);
 
     let city = document.querySelector("#city");
-    city.innerHTML = response.data.name;
+    city.innerHTML = response.data.city;
 
     let temperature = document.querySelector("#temp"); 
-    temperature.innerHTML = Math.round(response.data.main.temp);
+    temperature.innerHTML = Math.round(response.data.temperature.current);
 
     let humid = document.querySelector("#humidity"); 
-    humid.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+    humid.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
 
     let windSpeed = document.querySelector("#wind");
     windSpeed.innerHTML = `Wind: ${Math.round(response.data.wind.speed)}km/h`;
     
     let pressure = document.querySelector("#pressure");
-    pressure.innerHTML = `Pressure: ${(response.data.main.pressure)}`;
+    pressure.innerHTML = `Pressure: ${response.data.temperature.pressure}`;
  
     let weather = document.querySelector("#weather-description");
-    weather.innerHTML = response.data.weather[0].description;
+    weather.innerHTML = response.data.condition.description;
 
     let date = document.querySelector("#date");
-    date.innerHTML = formatDate(response.data.dt * 1000);
+    date.innerHTML = formatDate(response.data.time * 1000);
 
     let icon = document.querySelector("#icon1");
-    icon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-}
+    icon.setAttribute(
+      "src",
+      `${response.data.condition.icon_url}`
+      );
 
+  }
 
 
 function linkF(event) {
@@ -71,8 +74,10 @@ buttonLink1.addEventListener("click", linkC);
 
 
 function search (city) {
-let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+//let apiKey = "cabdbda40038ba7d1165b953b1c7bd6c";
+//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let apiKey = "t33bbb07a7bba4737bfcaf2ca66oea00";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=t33bbb07a7bba4737bfcaf2ca66oea00&units=metric`;
 axios.get(apiUrl).then(displayTemp);   
 }
 
