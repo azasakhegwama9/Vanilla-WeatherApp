@@ -93,7 +93,17 @@ function displayTemp (response){
       `${response.data.condition.icon_url}`
       );
 
-
+    function textNote(event) {
+      event.preventDefault();
+      let note = document.querySelector("#additionalText");
+           if (temperature.innerHTML < 20) {
+             note.innerHTML = `Grab a hot ☕`;
+           } else {
+             note.innerHTML = `Bask in the SUN 😎`;
+           }
+    }
+    let sideNote = document.querySelector("#additionalText");
+    sideNote.addEventListener("click", textNote); 
 
   }
 
